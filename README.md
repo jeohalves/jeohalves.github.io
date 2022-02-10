@@ -1,1 +1,0 @@
-# jeohalves.github.io
