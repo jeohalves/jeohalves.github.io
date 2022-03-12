@@ -1,0 +1,287 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=generator content="Wowchemy 5.4.0 for Hugo">
+<link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+<link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather&family=Roboto+Mono&display=swap">
+<link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather&family=Roboto+Mono&display=swap" media=print onload="this.media='all'">
+<meta name=google-site-verification content="google83223a76a39bdeb8.html">
+<meta name=author content="Jeovane Honório Alves">
+<meta name=description content="Computer vision-based parking lot management methods have been extensively researched upon owing to their flexibility and cost-effectiveness. To evaluate such methods authors often employ publicly available parking lot image datasets. In this study, we surveyed and compared robust publicly available image datasets specifically crafted to test computer vision-based methods for parking lot management approaches and consequently present a systematic and comprehensive review of existing works that employ such datasets. The literature review identified relevant gaps that require further research, such as the requirement of dataset-independent approaches and methods suitable for autonomous detection of position of parking spaces. In addition, we have noticed that several important factors such as the presence of the same cars across consecutive images, have been neglected in most studies, thereby rendering unrealistic assessment protocols. Furthermore, the analysis of the datasets also revealed that certain features that should be present when developing new benchmarks, such as the availability of video sequences and images taken in more diverse conditions, including nighttime and snow, have not been incorporated.">
+<link rel=alternate hreflang=en-us href=https://jeohalves.github.io/publication/almeida2022systematic/>
+<meta name=theme-color content="#4caf50">
+<script src=/js/mathjax-config.js></script>
+<link rel=stylesheet href=/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css media=print onload="this.media='all'">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css integrity="sha512-W0xM4mr6dEP9nREo7Z9z+9X70wytKvMGeDsj7ps2+xg5QPrEBXC8tAW1IFnzjR6eoJ90JmCnFzerQJTLzIEHjA==" crossorigin=anonymous media=print onload="this.media='all'">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/github.min.css crossorigin=anonymous title=hl-light media=print onload="this.media='all'">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/dracula.min.css crossorigin=anonymous title=hl-dark media=print onload="this.media='all'" disabled>
+<script src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js integrity crossorigin=anonymous async></script>
+<link rel=stylesheet href=/css/wowchemy.681e0cf4b5ed93d87b9a6d2f0d351fd2.css>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TTNHLTPLJ5"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}function trackOutboundLink(a,b){gtag('event','click',{event_category:'outbound',event_label:a,transport_type:'beacon',event_callback:function(){b!=='_blank'&&(document.location=a)}}),console.debug("Outbound link clicked: "+a)}function onClickCallback(a){if(a.target.tagName!=='A'||a.target.host===window.location.host)return;trackOutboundLink(a.target,a.target.getAttribute('target'))}gtag('js',new Date),gtag('config','G-TTNHLTPLJ5',{}),gtag('set',{cookie_flags:'SameSite=None;Secure'}),document.addEventListener('click',onClickCallback,!1)</script>
+<script>(function(b,d,e,a,g){b[a]=b[a]||[],b[a].push({'gtm.start':(new Date).getTime(),event:'gtm.js'});var f=d.getElementsByTagName(e)[0],c=d.createElement(e),h=a!='dataLayer'?'&l='+a:'';c.async=!0,c.src='https://www.googletagmanager.com/gtm.js?id='+g+h,f.parentNode.insertBefore(c,f)})(window,document,'script','dataLayer','G-TTNHLTPLJ5')</script>
+<link rel=manifest href=/manifest.webmanifest>
+<link rel=icon type=image/png href=/media/icon_hu2fd54a4efa430e13c3b224d47d4b162d_18608_32x32_fill_lanczos_center_3.png>
+<link rel=apple-touch-icon type=image/png href=/media/icon_hu2fd54a4efa430e13c3b224d47d4b162d_18608_180x180_fill_lanczos_center_3.png>
+<link rel=canonical href=https://jeohalves.github.io/publication/almeida2022systematic/>
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:site" content="@jeohalves">
+<meta property="twitter:creator" content="@jeohalves">
+<meta property="og:site_name" content="Jeovane Honório Alves">
+<meta property="og:url" content="https://jeohalves.github.io/publication/almeida2022systematic/">
+<meta property="og:title" content="A systematic review on computer vision-based parking lot management applied on public datasets | Jeovane Honório Alves">
+<meta property="og:description" content="Computer vision-based parking lot management methods have been extensively researched upon owing to their flexibility and cost-effectiveness. To evaluate such methods authors often employ publicly available parking lot image datasets. In this study, we surveyed and compared robust publicly available image datasets specifically crafted to test computer vision-based methods for parking lot management approaches and consequently present a systematic and comprehensive review of existing works that employ such datasets. The literature review identified relevant gaps that require further research, such as the requirement of dataset-independent approaches and methods suitable for autonomous detection of position of parking spaces. In addition, we have noticed that several important factors such as the presence of the same cars across consecutive images, have been neglected in most studies, thereby rendering unrealistic assessment protocols. Furthermore, the analysis of the datasets also revealed that certain features that should be present when developing new benchmarks, such as the availability of video sequences and images taken in more diverse conditions, including nighttime and snow, have not been incorporated."><meta property="og:image" content="https://jeohalves.github.io/publication/almeida2022systematic/featured.png">
+<meta property="twitter:image" content="https://jeohalves.github.io/publication/almeida2022systematic/featured.png"><meta property="og:locale" content="en-us">
+<meta property="article:published_time" content="2022-03-12T00:00:00+00:00">
+<meta property="article:modified_time" content="2022-03-12T00:00:00+00:00">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://jeohalves.github.io/publication/almeida2022systematic/"},"headline":"A systematic review on computer vision-based parking lot management applied on public datasets","image":["https://jeohalves.github.io/publication/almeida2022systematic/featured.png"],"datePublished":"2022-03-12T00:00:00Z","dateModified":"2022-03-12T00:00:00Z","author":{"@type":"Person","name":"Paulo Ricardo Lisboa de Almeida"},"publisher":{"@type":"Organization","name":"Jeovane Honório Alves","logo":{"@type":"ImageObject","url":"https://jeohalves.github.io/media/icon_hu2fd54a4efa430e13c3b224d47d4b162d_18608_192x192_fill_lanczos_center_3.png"}},"description":"Computer vision-based parking lot management methods have been extensively researched upon owing to their flexibility and cost-effectiveness. To evaluate such methods authors often employ publicly available parking lot image datasets. In this study, we surveyed and compared robust publicly available image datasets specifically crafted to test computer vision-based methods for parking lot management approaches and consequently present a systematic and comprehensive review of existing works that employ such datasets. The literature review identified relevant gaps that require further research, such as the requirement of dataset-independent approaches and methods suitable for autonomous detection of position of parking spaces. In addition, we have noticed that several important factors such as the presence of the same cars across consecutive images, have been neglected in most studies, thereby rendering unrealistic assessment protocols. Furthermore, the analysis of the datasets also revealed that certain features that should be present when developing new benchmarks, such as the availability of video sequences and images taken in more diverse conditions, including nighttime and snow, have not been incorporated."}</script>
+<title>A systematic review on computer vision-based parking lot management applied on public datasets | Jeovane Honório Alves</title>
+</head>
+<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class=page-wrapper data-wc-page-id=3403007669a427bf8f43274f28045367>
+<script src=/js/wowchemy-init.min.8f76bdc9e086322ed5147724ebba3d06.js></script>
+<div class=page-header>
+<header class=header--fixed>
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
+<div class=container-xl>
+<div class="d-none d-lg-inline-flex">
+<a class=navbar-brand href=/>Jeovane Honório Alves</a>
+</div>
+<button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar-content aria-expanded=false aria-label="Toggle navigation">
+<span><i class="fas fa-bars"></i></span>
+</button>
+<div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+<a class=navbar-brand href=/>Jeovane Honório Alves</a>
+</div>
+<div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content>
+<ul class="navbar-nav d-md-inline-flex">
+<li class=nav-item>
+<a class=nav-link href=/#about><span>Home</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#featured><span>Publications</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/uploads/resume.pdf><span>CV</span></a>
+</li>
+</ul>
+</div>
+<ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+<li class="nav-item dropdown theme-dropdown">
+<a href=# class=nav-link data-toggle=dropdown aria-haspopup=true aria-label="Display preferences">
+<i class="fas fa-moon" aria-hidden=true></i>
+</a>
+<div class=dropdown-menu>
+<a href=# class="dropdown-item js-set-theme-light">
+<span>Light</span>
+</a>
+<a href=# class="dropdown-item js-set-theme-dark">
+<span>Dark</span>
+</a>
+<a href=# class="dropdown-item js-set-theme-auto">
+<span>Automatic</span>
+</a>
+</div>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+</div>
+<div class=page-body>
+<div class=pub>
+<div class="article-container pt-3">
+<h1>A systematic review on computer vision-based parking lot management applied on public datasets</h1>
+<div class=article-metadata>
+<div>
+<span>
+Paulo Ricardo Lisboa de Almeida</span>, <span class=author-highlighted>
+Jeovane Honório Alves</span>, <span>
+Rafael Stubs Parpinelli</span>, <span>
+Jean Paul Barddal</span>
+</div>
+<span class=article-date>
+March 2022
+</span>
+<span class=middot-divider></span>
+<a href=/publication/almeida2022systematic/#disqus_thread></a>
+</div>
+<div class="btn-links mb-3">
+<a href=# class="btn btn-outline-primary btn-page-header js-cite-modal" data-filename=/publication/almeida2022systematic/cite.bib>
+Cite
+</a>
+<a class="btn btn-outline-primary btn-page-header" href=https://doi.org/10.1016/j.eswa.2022.116731 target=_blank rel=noopener>
+DOI
+</a>
+</div>
+</div>
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style=max-width:720px;max-height:432px>
+<div style=position:relative>
+<img src=/publication/almeida2022systematic/featured_hub58702e84e643254a4d9eebf28cd0c0c_2140310_720x2500_fit_q75_h2_lanczos_3.webp width=720 height=432 alt class=featured-image>
+<span class=article-header-caption>Parking Lot Management</span>
+</div>
+</div>
+<div class=article-container>
+<h3>Abstract</h3>
+<p class=pub-abstract>Computer vision-based parking lot management methods have been extensively researched upon owing to their flexibility and cost-effectiveness. To evaluate such methods authors often employ publicly available parking lot image datasets. In this study, we surveyed and compared robust publicly available image datasets specifically crafted to test computer vision-based methods for parking lot management approaches and consequently present a systematic and comprehensive review of existing works that employ such datasets. The literature review identified relevant gaps that require further research, such as the requirement of dataset-independent approaches and methods suitable for autonomous detection of position of parking spaces. In addition, we have noticed that several important factors such as the presence of the same cars across consecutive images, have been neglected in most studies, thereby rendering unrealistic assessment protocols. Furthermore, the analysis of the datasets also revealed that certain features that should be present when developing new benchmarks, such as the availability of video sequences and images taken in more diverse conditions, including nighttime and snow, have not been incorporated.</p>
+<div class=row>
+<div class=col-md-1></div>
+<div class=col-md-10>
+<div class=row>
+<div class="col-12 col-md-3 pub-row-heading">Type</div>
+<div class="col-12 col-md-9">
+<a href=/publication/#2>
+Journal article
+</a>
+</div>
+</div>
+</div>
+<div class=col-md-1></div>
+</div>
+<div class="d-md-none space-below"></div>
+<div class=row>
+<div class=col-md-1></div>
+<div class=col-md-10>
+<div class=row>
+<div class="col-12 col-md-3 pub-row-heading">Publication</div>
+<div class="col-12 col-md-9">Expert Systems with Applications</div>
+</div>
+</div>
+<div class=col-md-1></div>
+</div>
+<div class="d-md-none space-below"></div>
+<div class=space-below></div>
+<div class=article-style></div>
+<div class=article-tags>
+<a class="badge badge-light" href=/tag/parking-lot/>parking lot</a>
+<a class="badge badge-light" href=/tag/dataset/>dataset</a>
+<a class="badge badge-light" href=/tag/benchmark/>benchmark</a>
+<a class="badge badge-light" href=/tag/machine-learning/>Machine Learning</a>
+<a class="badge badge-light" href=/tag/image-processing/>image processing</a>
+</div>
+<div class=share-box>
+<ul class=share>
+<li>
+<a href="https://twitter.com/intent/tweet?url=https://jeohalves.github.io/publication/almeida2022systematic/&text=A%20systematic%20review%20on%20computer%20vision-based%20parking%20lot%20management%20applied%20on%20public%20datasets" target=_blank rel=noopener class=share-btn-twitter aria-label=twitter>
+<i class="fab fa-twitter"></i>
+</a>
+</li>
+<li>
+<a href="https://www.facebook.com/sharer.php?u=https://jeohalves.github.io/publication/almeida2022systematic/&t=A%20systematic%20review%20on%20computer%20vision-based%20parking%20lot%20management%20applied%20on%20public%20datasets" target=_blank rel=noopener class=share-btn-facebook aria-label=facebook>
+<i class="fab fa-facebook"></i>
+</a>
+</li>
+<li>
+<a href="mailto:?subject=A%20systematic%20review%20on%20computer%20vision-based%20parking%20lot%20management%20applied%20on%20public%20datasets&body=https://jeohalves.github.io/publication/almeida2022systematic/" target=_blank rel=noopener class=share-btn-email aria-label=envelope>
+<i class="fas fa-envelope"></i>
+</a>
+</li>
+<li>
+<a href="https://www.linkedin.com/shareArticle?url=https://jeohalves.github.io/publication/almeida2022systematic/&title=A%20systematic%20review%20on%20computer%20vision-based%20parking%20lot%20management%20applied%20on%20public%20datasets" target=_blank rel=noopener class=share-btn-linkedin aria-label=linkedin-in>
+<i class="fab fa-linkedin-in"></i>
+</a>
+</li>
+<li>
+<a href="whatsapp://send?text=A%20systematic%20review%20on%20computer%20vision-based%20parking%20lot%20management%20applied%20on%20public%20datasets%20https://jeohalves.github.io/publication/almeida2022systematic/" target=_blank rel=noopener class=share-btn-whatsapp aria-label=whatsapp>
+<i class="fab fa-whatsapp"></i>
+</a>
+</li>
+<li>
+<a href="https://service.weibo.com/share/share.php?url=https://jeohalves.github.io/publication/almeida2022systematic/&title=A%20systematic%20review%20on%20computer%20vision-based%20parking%20lot%20management%20applied%20on%20public%20datasets" target=_blank rel=noopener class=share-btn-weibo aria-label=weibo>
+<i class="fab fa-weibo"></i>
+</a>
+</li>
+</ul>
+</div>
+<div class="media author-card content-widget-hr">
+<a href=https://jeohalves.github.io/><img class="avatar mr-3 avatar-circle" src="https://s.gravatar.com/avatar/6136f9470d0beb76ddef8b11269548a3?s=200" alt="Jeovane Honório Alves"></a>
+<div class=media-body>
+<h5 class=card-title><a href=https://jeohalves.github.io/>Jeovane Honório Alves</a></h5>
+<h6 class=card-subtitle>Machine Learning Researcher</h6>
+<p class=card-text>My research interests include neural architecture search, computer vision and medical image processing.</p>
+<ul class=network-icon aria-hidden=true>
+<li>
+<a href=mailto:jeohalves@gmail.com>
+<i class="fas fa-envelope"></i>
+</a>
+</li>
+<li>
+<a href=https://twitter.com/jeohalves target=_blank rel=noopener>
+<i class="fab fa-twitter"></i>
+</a>
+</li>
+<li>
+<a href="https://scholar.google.com/citations?user=bervpJsAAAAJ" target=_blank rel=noopener>
+<i class="fas fa-graduation-cap"></i>
+</a>
+</li>
+<li>
+<a href=https://github.com/jeohalves target=_blank rel=noopener>
+<i class="fab fa-github"></i>
+</a>
+</li>
+<li>
+<a href=https://www.linkedin.com/in/jhalves/ target=_blank rel=noopener>
+<i class="fab fa-linkedin"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<section id=comments>
+<div id=disqus_thread></div>
+<script>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='https://jeohalves.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
+<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
+<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
+</section>
+</div>
+</div>
+</div>
+<div class=page-footer>
+<div class=container>
+<footer class=site-footer>
+<p class=powered-by>
+© {2022} Me
+</p>
+<p class=powered-by>
+Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target=_blank rel=noopener>Wowchemy</a> — the free, <a href=https://github.com/wowchemy/wowchemy-hugo-themes target=_blank rel=noopener>open source</a> website builder that empowers creators.
+</p>
+</footer>
+</div>
+</div>
+<div id=modal class="modal fade" role=dialog>
+<div class=modal-dialog>
+<div class=modal-content>
+<div class=modal-header>
+<h5 class=modal-title>Cite</h5>
+<button type=button class=close data-dismiss=modal aria-label=Close>
+<span aria-hidden=true>&#215;</span>
+</button>
+</div>
+<div class=modal-body>
+<pre><code class="tex hljs"></code></pre>
+</div>
+<div class=modal-footer>
+<a class="btn btn-outline-primary my-1 js-copy-cite" href=# target=_blank>
+<i class="fas fa-copy"></i> Copy
+</a>
+<a class="btn btn-outline-primary my-1 js-download-cite" href=# target=_blank>
+<i class="fas fa-download"></i> Download
+</a>
+<div id=modal-error></div>
+</div>
+</div>
+</div>
+</div>
+<script src=/js/vendor-bundle.min.b73dfaac3b6499dc997741748a7c3fe2.js></script>
+<script src=https://cdn.jsdelivr.net/gh/desandro/imagesloaded@v4.1.4/imagesloaded.pkgd.min.js integrity="sha512-S5PZ9GxJZO16tT9r3WJp/Safn31eu8uWrzglMahDT4dsmgqWonRY9grk3j+3tfuPr9WJNsfooOR7Gi7HL5W2jw==" crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/gh/metafizzy/isotope@v3.0.6/dist/isotope.pkgd.min.js integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js integrity="sha512-Ypjm0o7jOxAd4hpdoppSEN0TQOC19UtPAqD+4s5AlXmUvbmmS/YMxYqAqarQYyxTnB6/rqip9qcxlNB/3U9Wdg==" crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/Python.min.js crossorigin=anonymous></script>
+<script id=dsq-count-scr src=https://jeohalves.disqus.com/count.js async></script>
+<script id=page-data type=application/json>{"use_headroom":true}</script>
+<script src=/js/wowchemy-headroom.1cb9e2fc8399acee94eab837265b73bf.js type=module></script>
+<script src=/en/js/wowchemy.min.216188596c551a0582beb89fb0d646e2.js></script>
+</body>
+</html>
